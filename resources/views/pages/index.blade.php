@@ -32,4 +32,6 @@
         @endforeach
     </table>
 
+    <a href="{{route('comic.create')}}">ADD COMIC</a>
+
 @endsection
