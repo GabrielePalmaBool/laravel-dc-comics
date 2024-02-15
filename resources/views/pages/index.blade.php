@@ -3,6 +3,8 @@
     <title>Home</title>
 @endsection
 @section('content')
+
+<h1>Lista fumetti</h1>
     
     <table class="comics">
         
@@ -17,11 +19,13 @@
         @foreach ( $comics as $comic)
 
         <tr>
-            <td>{{$comic -> titolo}}</td>
+            
+            <td><a href="{{route('comic.show', $comic -> id)}}">{{$comic -> titolo}}</a></td>
             <td>{{$comic -> casa_editrice}}</td>
             <td>{{$comic -> genere}}</td>
             <td>{{$comic -> data_pubblicazione}}</td>
             <td>{{$comic -> prezzo}}</td>
+            
         </tr>
            
 

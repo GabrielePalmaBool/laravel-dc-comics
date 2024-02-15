@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\MainController;
+use App\Http\Controllers\ComicController;
 
-Route::get('/', [MainController::class,'index']);
+// chiamo metodo index del ComicController
+Route::get('/', [ComicController::class,'index']) ->name('comic.index');
+
+// chiamo metodo show del ComicController
+Route::get('/comics/{id}', [ComicController::class,'show']) ->name('comic.show');
