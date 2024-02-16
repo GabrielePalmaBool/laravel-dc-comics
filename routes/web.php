@@ -16,4 +16,7 @@ Route::post('/comics', [ComicController::class,'store']) ->name('comic.store');
 // chiamo metodo show del ComicController
 Route::get('/comics/{id}', [ComicController::class,'show']) ->name('comic.show');
 
+// chiamo metodo destroy del ComicController
+Route::delete('/comics/{id}', [ComicController::class,'destroy']) ->name('comic.destroy');
+
 

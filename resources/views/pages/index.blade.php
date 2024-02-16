@@ -14,18 +14,33 @@
             <th>Genere</th>
             <th>Data di uscita</th>
             <th>Prezzo</th>
+            <th>Elimina</th>
         </tr>
 
         @foreach ( $comics as $comic)
 
         <tr>
             
-            <td><a href="{{route('comic.show', $comic -> id)}}">{{$comic -> titolo}}</a></td>
+            <td>
+                <a href="{{route('comic.show', $comic -> id)}}">
+                    {{$comic -> titolo}}
+                </a>
+            </td>
             <td>{{$comic -> casa_editrice}}</td>
             <td>{{$comic -> genere}}</td>
             <td>{{$comic -> data_pubblicazione}}</td>
             <td>{{$comic -> prezzo}}</td>
-            
+            <!-- Cancellazione riga -->
+            <td>
+                <form action="{{route('comic.destroy', $comic -> id)}}" method="POST">
+
+                    @csrf
+                    @method('DELETE')
+
+                    <input type="submit" value="X">
+
+                </form>
+            </td>
         </tr>
            
 
