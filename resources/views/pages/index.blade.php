@@ -44,7 +44,7 @@
                     @csrf
                     @method('DELETE')
 
-                    <input type="submit" value="X">
+                    <input type="submit" value="X" id="delBt">
 
                 </form>
             </td>
