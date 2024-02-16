@@ -14,6 +14,7 @@
             <th>Genere</th>
             <th>Data di uscita</th>
             <th>Prezzo</th>
+            <th>Modifica</th>
             <th>Elimina</th>
         </tr>
 
@@ -30,6 +31,12 @@
             <td>{{$comic -> genere}}</td>
             <td>{{$comic -> data_pubblicazione}}</td>
             <td>{{$comic -> prezzo}}</td>
+
+            <!-- Modifica riga -->
+            <td>
+                <a href="{{route('comic.edit', $comic -> id)}}">MODIFICA</a>
+            </td>
+
             <!-- Cancellazione riga -->
             <td>
                 <form action="{{route('comic.destroy', $comic -> id)}}" method="POST">
@@ -41,6 +48,7 @@
 
                 </form>
             </td>
+
         </tr>
            
 
