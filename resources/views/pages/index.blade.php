@@ -39,7 +39,7 @@
 
             <!-- Cancellazione riga -->
             <td>
-                <form action="{{route('comic.destroy', $comic -> id)}}" method="POST">
+                <form action="{{route('comic.destroy', $comic -> id)}}" method="POST" onsubmit="return confirm('CONFERMARE?')">
 
                     @csrf
                     @method('DELETE')

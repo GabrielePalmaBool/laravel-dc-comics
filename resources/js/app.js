@@ -1,9 +1,9 @@
 import "./bootstrap";
 
-const element = document.getElementById("delBt");
+// const element = document.getElementById("delBt");
 
-element.addEventListener("click", redFunction);
+// element.addEventListener("click", redFunction);
 
-function redFunction() {
-    alert("Confermo eliminazione?");
-}
+// function redFunction() {
+//     alert("Confermo eliminazione?");
+// }
